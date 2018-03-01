@@ -69,12 +69,15 @@ $(document).ready(function () {
         // This line grabs the input from the textbox
         var newShow = $("#tv-input").val().trim();
 
+        if (newShow != "") {
+
         // Adding movie from the textbox to our array
         tvshowArray.push(newShow);
         console.log(tvshowArray);
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
+        }
     });
 
     $(document).on("click", ".pause", function () {
